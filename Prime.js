@@ -1,19 +1,39 @@
 // Problem 1 : Check whether a number is Prime or not
 
-let number = 11;
-let count=0;
-for(let i=number;i<=number;i++)
-  {
-    if(i%1==0 && number%i==0)
+let num = 11;
+
+if ( num == 2 )
     {
-      count++;
+        console.log ( "Prime" )  ;
     }
-  }
-if(count==2)
-{
-  console.log("Prime Number");
-}
-else
-{
-  console.log("Not Prime Number");
-}
+    
+    else if ( num%2 )
+    {
+        let flag = false  ;
+        
+        for ( let i = 3 ; i*i<=num ; i=i+2 )
+        {
+            if ( num%i )
+            {
+                continue  ;
+            }
+            
+            flag = 1  ;
+            break  ;
+        }
+        
+        if ( flag )
+        {
+            console.log ( "Not Prime" )  ;
+        }
+        
+        else
+        {
+            console.log ( "Prime" )  ;   
+        }
+    }
+    
+    else
+    {
+        console.log ( "Prime" )  ;
+    }
